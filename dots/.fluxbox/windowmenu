@@ -1,0 +1,12 @@
+[begin]
+  [layer]       (layer)
+  [stick]       (stick)
+  [raise]       (raise)
+  [lower]       (lower)
+  [fullscreen]  (fullscreen)
+  [maximize]    (maximize)
+  [shade]       (shade)
+  [iconify]     (iconify)
+  [toggledecor] (toggle decor)
+  [close]       (close)
+[end]

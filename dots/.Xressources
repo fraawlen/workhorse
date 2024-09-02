@@ -1,0 +1,102 @@
+! colors
+! black
+*.color0                : #282828
+*.color8                : #928374
+! red
+*.color1                : #cc241d
+*.color9                : #fb4934
+! green
+*.color2                : #98971a
+*.color10               : #b8bb26
+! yellow
+*.color3                : #d79921
+*.color11               : #fabd2d
+! blue
+*.color4                : #458588
+*.color12               : #83a598
+!magenta
+*.color5                : #b16286
+*.color13               : #d3869b
+! cyan
+*.color6                : #689d6a
+*.color14               : #8ec07c
+! white
+*.color7                : #a89984
+*.color15               : #ebdbb2
+! other
+*.background            : #141414
+*.foreground            : #ebdbb2
+*.colorBD               : #ffffff
+*.colorIT               : #d65d0e
+*.colorUL               : #fe8019
+
+! xorg
+Xcursor.size : 25
+
+! urxvt behaviour
+URxvt.scrollTtyOutput   : false
+URxvt.scrollWithBuffer  : false
+URxvt.scrollTtyKeypress : true
+URxvt.saveLines         : 2048
+URxvt.secondaryScroll   : false
+URxvt.secondaryScreen   : true
+URxvt.pastableTabs      : true
+URxvt.urgentOnBell      : true
+
+! urxvt appearance
+URxvt.font              : xft:terminus:pixelsize=14:antialias=false
+URxvt.boldFont          : xft:terminus:pixelsize=14:style=bold:antialias=false
+URxvt.italicFont        : xft:terminus:pixelsize=14:style=bold:antialias=false
+URxvt.boldItalicFont    : xft:terminus:pixelsize=14:style=bold:antialias=false
+URxvt.geometry          : 114x60
+URxvt.letterSpace       : 0
+URxvt.lineSpace         : 4
+URxvt.internalBorder    : 18
+URxvt.cursorBlink       : true
+URxvt.cursorUnderline   : true
+URxvt.depth             : 32
+URxvt.thickness         : 18
+URxvt.scrollBar         : false
+URxvt.cursorColor       : 1
+URxvt.cursorColor2      : 7
+
+! urxvt extensions
+URxvt.perl-ext-common   : default,matcher
+URxvt.url-launcher      : /usr/bin/icecat
+URxvt.matcher.button    : 1
+URxvt.matcher.rend.0    : Uline Bold fg4
+
+! urxvt keybinds
+URxvt.iso14755          : false
+URxvt.iso14755_52       : false
+URxvt.keysym.C-M-c      : builtin-string:
+URxvt.keysym.C-M-v      : builtin-string:
+URxvt.keysym.C-S-0x43   : eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56   : eval:paste_clipboard
+
+! xmenu
+xmenu.font              : Terminus-10
+xmenu.background        : #141414
+xmenu.foreground        : #ebdbb2
+xmenu.selbackground     : #bd8f28
+xmenu.selforeground     : #1d2021
+xmenu.border            : #000000
+xmenu.separator         : #000000
+xmenu.gap               : 0
+xmenu.height            : 40
+xmenu.borderWidth       : 2
+xmenu.separatorWidth    : 2
+xmenu.alignment         : left
+xmenu.horizontalPadding : 12
+xmenu.separatorPadding  : 0
+xmenu.triangleWidth     : 14
+xmenu.triangleHeight    : 14
+
+! sxiv
+
+Sxiv.background        : #131313
+Sxiv.foreground        : #1b1b1b
+Sxiv.fontColor         : #ebdbb2
+Sxiv.font              : Terminus-12
+Sxiv.horizontalTextPad : 12
+Sxiv.verticalTextPad   : 12

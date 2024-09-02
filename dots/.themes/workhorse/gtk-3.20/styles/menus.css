@@ -1,0 +1,362 @@
+/* Right Click and File Menus */
+
+menubar,
+.menubar {
+  -GtkWidget-window-dragging: true;
+  padding: 0;
+  color: @menubar_item_fg;
+  background-color: @menubar_item_bg;
+  margin-left: -1px; /*no line (delete if wrong) 2019-09-21 */ }
+  menubar > menuitem,
+  .menubar > menuitem,
+  menubar menuitem {
+  margin-left: 0; /*-1px 2021-07-21 */
+  transition: all 75ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 8px 8px;
+    border: 1px solid transparent; }
+    menubar > menuitem:hover,
+    .menubar > menuitem:hover {
+  color: @menubar_item_fg;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: @menubar_item_border;
+  border-left-color: @menubar_item_border;
+  border-right-color: @menubar_item_border;
+  border-bottom-color: transparent;
+  background-color: @menu_item_hover_bg; }
+menubar menubar > menuitem:disabled,
+menubar .menubar > menuitem:disabled,
+menubar menu menuitem:disabled label,
+menubar .menu menuitem:disabled label,
+menubar menubar > menuitem:disabled,
+menubar .menubar > menuitem:disabled,
+menubar menu menuitem:disabled label,
+menubar .menu menuitem:disabled label,
+menu menuitem:disabled,
+.menu menuitem:disabled,
+menu menuitem:disabled label,
+.menu menuitem:disabled label   {
+      color: shade (@menu_bg, 0.7);
+      box-shadow: none; }
+    menu menuitem:disabled accelerator {
+      color: shade (@menu_bg, 0.85);
+      text-shadow: none;
+      font-size: small; }
+
+menu separator,
+.menu separator,
+.menu separator {
+    margin: 1px 2px;
+    padding: 0px 0px;
+    background-color: shade (@menu_bg, 0.95); }
+
+menu image
+{
+color: shade (@menu_item_fg, 1.2);
+}
+
+menu menuitem,
+.menu menuitem {
+margin-left: -1px;
+margin-top: 0;
+margin-right: 1px;
+margin-bottom: 0;
+    color: @menu_item_fg;
+    transition: all 80ms cubic-bezier(0.1, 1.0, 0.1, 0.1);
+    min-width: 40px;
+    min-height: 16px;
+    padding: 3px 11px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+    border-right: none;
+    -gtk-icon-shadow: none; }
+
+menu menuitem:hover,
+  .menu menuitem:hover,
+  .menu menuitem:active,
+  .menu menuitem:focus {
+  color: @menu_item_hover_fg;
+    background-color: @menu_item_bg;
+    /* background-image: linear-gradient(to bottom, #FFFFFF, @menu_item_bg); */
+    border-top: 1px solid @menu_item_border;
+    border-bottom: 1px solid @menu_item_border;
+    border-left: 1px solid transparent;
+    border-right: none;
+    box-shadow: inset 7px 0 @menu_item_border_highlight;
+    /* box-shadow: inset 0 1px white, inset 1px 0 white, inset 0 -1px white, inset -1px 0 white; */
+    /* box-shadow: inset 0 1px white,inset 0 -1px white; */
+     }
+
+
+    menu arrow,
+    .menu arrow {
+      min-height: 16px;
+      min-width: 16px; }
+      menu arrow:dir(ltr),
+      .menu arrow:dir(ltr) {
+        color: @menu_item_fg;
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+        margin-left: 10px; }
+      menu arrow:dir(rtl),
+      .menu arrow:dir(rtl) {
+        color: @menu_item_fg;
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+        margin-right: 10px; }
+    menu menuitem accelerator {
+      color: alpha(currentColor,0.4);
+      text-shadow: none;
+      font-size: small; }
+    menuitem check, menuitem radio {
+      min-height: 16px;
+      min-width: 16px; }
+      menuitem check:dir(ltr), menuitem radio:dir(ltr) {
+        margin-right: 4px;
+        margin-left: 0; }
+      menuitem check:dir(rtl), menuitem radio:dir(rtl) {
+        margin-left: 40px;
+        margin-right: 0; }
+  menu > arrow,
+  .menu > arrow {
+    border-color: transparent;
+    border-image: none;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
+    min-width: 16px;
+    min-height: 16px;
+    padding: 4px;
+    background-color: #ffffff;
+    border-radius: 0; }
+    menu > arrow.top,
+    .menu > arrow.top {
+      margin-top: -6px;
+      border-bottom: 1px solid #ececec;
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    menu > arrow.bottom,
+    .menu > arrow.bottom {
+      margin-bottom: -6px;
+      border-top: 1px solid #ececec;
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    menu > arrow:hover,
+    .menu > arrow:hover {
+      background-color: #ececec; }
+    menu > arrow:disabled,
+    .menu > arrow:disabled {
+      color: transparent;
+      background-color: transparent;
+      border-color: transparent; }
+menu,
+.menu
+  {
+  margin-top: 4px;
+margin-bottom: 4px;
+  background-image: none;
+  background-color: @menu_bg;
+  border: 1px solid @menu_item_border; }
+
+
+
+.csd.menubar.menuitem,
+.csd menubar menuitem,
+menubar .csd menu,
+menubar .csd.menu
+{
+border-style: none;
+margin-left: 20px;
+}
+
+.csd menu,
+.csd.menu
+{
+border-style: none;
+}
+/*
+.popup.csd decoration {}
+*/
+
+.csd menu separator
+{
+margin-top: 4px;
+margin-bottom: 4px;
+}
+
+.csd menu menuitem
+{
+margin-left: -1px;
+margin-top: -1px;
+margin-right: -1px;
+}
+
+  .popup.csd decoration {
+  margin-top: -20px;
+border: 1px solid @menu_item_border;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2); }
+
+/*
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2), 0 0 0 1px @menu_item_border;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2), 0 0 0 0 @menu_item_border; - removed border 2018-05-16
+*/
+
+menuitem .linked:not(.vertical) > button:last-child, menuitem .linked:not(.vertical) > button:first-child
+{
+border-color: @button_normal_border;
+color: @theme_fg_color;
+}
+
+menuitem .linked:not(.vertical) > button
+{
+border-style: solid;
+border-width: 1px 0 1px 0;
+border-color: @button_normal_border;
+color: @theme_fg_color;
+}
+
+menuitem .linked:not(.vertical) > button:active, menuitem .linked:not(.vertical) > button:hover
+{
+color: @theme_fg_color;
+border-color: @button_active_border;
+background-color: @button_active_bg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+popover,
+popover.background {
+  background-clip: border-box;
+  padding: 2px 2px;
+  margin: 0;
+  border-radius: 0;
+  background-color: @menu_bg;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  border: 1px solid @menu_border_darker;
+  -gtk-icon-shadow: none; }
+
+  popover list,
+  popover.background list {
+    background-color: @menu_bg; }
+  popover > list,
+  popover > .view,
+  popover > iconview,
+  popover > toolbar,
+  popover.background > list,
+  popover.background > .view,
+  popover.background > iconview,
+  popover.background > toolbar {
+    border: none;
+    background: none;
+    box-shadow: none; }
+  popover button.flat, popover button.sidebar-button,
+  popover button.flat:hover,
+  popover button.sidebar-button:hover,
+  popover.background button.flat,
+  popover.background button.sidebar-button,
+  popover.background button.flat:hover,
+  popover.background button.sidebar-button:hover {
+    transition: none;
+    color: @menu_item_fg; }
+  popover separator,
+  popover.background separator {
+  background-color: shade (@menu_item_bg, 0.95);
+    margin: 3px 20px; }
+  popover list separator,
+  popover.background list separator {
+    margin: 0px; }
+
+/* Popover Stuff? */
+
+menuitem.button.flat {
+border-radius: 0;
+margin-top: 1px;
+margin-bottom: 1px;
+padding: 4px 14px;
+border: 1px solid red; }
+
+
+popover.background list row,
+popover.background list row:not(:hover),
+modelbutton.flat
+{
+ transition: all 75ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ border-radius: 0;
+ margin-top: 1px;
+ margin-bottom: 1px;
+ padding: 4px 14px;
+ border: 1px solid transparent;
+}
+
+popover.background list row:hover,
+popover.background list row:focus:hover,
+menuitem.button.flat:hover,
+modelbutton.flat:hover
+{
+ background-color: @menu_item_bg;
+ border-style: solid;
+ border-width: 1px;
+ border-color: @menu_item_border;
+ box-shadow: inset 6px 0 @menu_item_border_highlight;
+}
+
+popover.background list row:active:hover,
+popover.background list row:checked:hover,
+menuitem.button.flat:active:hover,
+menuitem.button.flat:checked:hover,
+modelbutton.flat:active:hover,
+modelbutton.flat:checked:hover
+{
+ border-color: @menu_item_border_highlight;
+ background-color: @button_checked_bg;
+}
+
+popover.background list row:focus,
+menuitem.button.flat:focus,
+modelbutton.flat:focus
+{
+ background-color: @menu_item_bg;
+ border-style: solid;
+ border-width: 1px;
+ border-color: shade (@menu_item_border, 1.1);
+}
+
+menuitem.button.flat check:last-child,
+menuitem.button.flat radio:last-child,
+modelbutton.flat check:last-child,
+modelbutton.flat radio:last-child
+{
+ margin-left: 8px;
+}
+
+menuitem.button.flat check:first-child,
+menuitem.button.flat radio:first-child,
+modelbutton.flat check:first-child,
+modelbutton.flat radio:first-child
+{
+ margin-right: 8px;
+}
+
+modelbutton.flat arrow, modelbutton.flat arrow:hover {
+  background: none; }
+
+modelbutton.flat arrow.left {
+  -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+
+modelbutton.flat arrow.right {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+
+.scale-popup button { margin: 4px; }

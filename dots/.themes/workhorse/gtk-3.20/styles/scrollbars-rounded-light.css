@@ -1,0 +1,232 @@
+* {
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false; }
+
+
+
+
+scrollbar button,
+scrollbar button:hover,
+scrollbar button:active,
+scrollbar button:selected,
+scrollbar button:disabled
+{
+  padding: 0;
+  border-style: none;
+  background-color: shade (@theme_bg_color, 1.1);
+}
+
+scrollbar.vertical button.down
+{
+  color: @theme_fg_color;
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+scrollbar.vertical button.up
+{
+  color: @theme_fg_color;
+  -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+scrollbar.horizontal button.down
+{
+  color: @theme_fg_color;
+  -gtk-icon-source: -gtk-icontheme("pan-right-symbolic");
+}
+
+scrollbar.horizontal button.up
+{
+  color: @theme_fg_color;
+  -gtk-icon-source: -gtk-icontheme("pan-left-symbolic");
+}
+
+scrollbar.dragging, scrollbar.hovering
+{
+  opacity: 0.998;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering)
+{
+  opacity: 0.999; }
+
+
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider
+{
+  background-color: @scrollbar_normal_bg;
+  border-color: transparent;
+  border-radius: 30px;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider
+{
+  margin: 0;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider
+{
+  background-color: @scrollbar_normal_bg;
+  border-color: transparent;
+  border-radius: 30px;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough
+{
+  border: none;
+  padding: 6px 7px 6px 6px;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+scrollbar trough
+{
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-style: solid;
+  border-width: 6px 6px 6px 6px;
+  border-color: rgba(255, 255, 255, 0.0);
+  }
+
+  scrollbar trough:dir(rtl)
+{
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-style: solid;
+  border-width: 6px 6px 6px 6px;
+  border-color: rgba(255, 255, 255, 0.0);
+}
+
+scrollbar.horizontal trough
+{
+  border-radius: 0;
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgba(255, 255, 255, 0.0);
+}
+
+
+scrolledwindow scrollbar trough
+{
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-style: solid;
+  border-width: 6px 6px 6px 6px;
+  border-color: rgba(255, 255, 255, 0.0);
+}
+
+scrolledwindow scrollbar.horizontal trough
+{
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgba(255, 255, 255, 0.0);
+}
+
+
+/*
+TerminalWindow, .TerminalWindow, terminalwindow, .terminalwindow, terminal, .terminal, term, .term, .terminal .window, terminal-window, .mate-terminal, .xfce4-terminal, xfce4-terminal, terminal, .terminal, xfce-terminal, .xfce-terminal, .xfce4-term, xfce4-term, .xfce-term, .xfce-term {
+  border-image: none;
+  border-radius: 0;
+  background-color: red;
+  border-style: solid;
+  border-width: 6px 6px 6px 6px;
+  border-color: red;
+  }
+
+*/
+
+
+scrollbar slider
+{
+  min-width: 8px;
+  min-height: 10px;
+  background-color: @scrollbar_normal_bg;
+  border-color: transparent;
+  border-radius: 30px;
+  border-width: 9px 9px 9px 9px;
+  border-style: solid;
+}
+
+scrollbar slider:dir(rtl)
+{
+  min-width: 8px;
+  min-height: 10px;
+  background-color: @scrollbar_normal_bg;
+  border-color: transparent;
+  border-radius: 30px;
+  border-width: 9px 9px 9px 9px;
+  border-style: solid; 
+}
+
+scrollbar slider:hover, scrollbar slider:disabled
+{
+  background-color: shade (@scrollbar_hover_bg, 1.0);
+}
+
+scrollbar slider:hover:dir(rtl), scrollbar slider:disabled:dir(rtl)
+{
+  background-color: shade (@scrollbar_hover_bg, 1.0);
+}
+
+scrollbar slider:active
+{
+  background-color: @scrollbar_active_bg;
+}
+
+scrollbar slider:active:dir(rtl)
+{
+  background-color: @scrollbar_active_bg;
+}
+
+scrollbar.horizontal slider
+{
+  min-width: 10px;
+  min-height: 8px;
+  background-color: @scrollbar_normal_bg;
+  border-color: transparent;
+  border-radius: 30px;
+  border-width: 9px 9px 9px 9px;
+  border-style: solid;
+}
+
+scrollbar.horizontal slider:hover, scrollbar.horizontal slider:disabled
+{
+  background-color: @scrollbar_hover_bg;
+}
+
+scrollbar.horizontal slider:active
+{
+  background-color: @scrollbar_active_bg;
+}
+
+scrollbar.vertical slider
+{
+  min-height: 64px;
+  margin: -8px -7px -8px -8px;
+}
+
+scrollbar.horizontal slider
+{
+  min-width: 64px;
+  margin: -8px -8px -7px -8px;
+}
+
+
+.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) trough
+{
+  border: none;
+  padding: 6px 7px 6px 6px;
+  background-color: @sidebar_bg_color;
+}
+
+.sidebar scrollbar trough
+{
+  background-color: @sidebar_bg_color;
+  border-style: solid;
+  border-width: 6px 6px 6px 6px;
+  border-color: @sidebar_bg_color;
+}

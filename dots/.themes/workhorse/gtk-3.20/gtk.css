@@ -1,0 +1,143 @@
+/* global elements */
+@define-color border          #000000;
+@define-color font_idle       #ebdbb2;
+@define-color font_focus      #000000;
+@define-color font_pressed    #000000;
+@define-color font_disabled   #a89984;
+@define-color font_area       #ebdbb2;
+
+/* clickable elements */
+@define-color button_idle     #252525;
+@define-color button_focus    #bd8f28;
+@define-color button_pressed  #51401b;
+@define-color button_hover    #ab8124;
+@define-color button_disabled #665c54;
+
+/* menubar, column headers, tabs, statusbar */
+@define-color header_idle     #202020;
+@define-color header_focus    #bd8f28;
+@define-color header_pressed  #fe8019;
+
+/* areas for complex elements */
+@define-color area            #32302f;
+@define-color area_darker     #202020;
+@define-color area_darkest    #141414;
+
+/* -------------------------------------------------------- */
+
+@define-color theme_bg_color @area_darker;
+@define-color theme_fg_color @font_idle;
+@define-color theme_base_color @area_darkest;
+@define-color theme_text_color @font_idle;
+@define-color theme_selected_bg_color @button_focus;
+@define-color theme_selected_fg_color @border;
+@define-color theme_border_color @border;
+@define-color theme_border_color_lighter @border;
+@define-color theme_border_color_medium @border;
+@define-color theme_border_color_darker @border;
+@define-color theme_border_color_darkest @border;
+@define-color wm_title @button_focus;
+@define-color wm_unfocused_title @button_idle;
+@define-color theme_fg_disabled_color @area;
+
+@define-color statusbar_bg_color @header_idle;
+@define-color statusbar_fg_color @font_idle;
+
+/* Buttons */
+
+@define-color button_disabled_fg @button_disabled;
+
+@define-color button_normal_bg @button_idle;
+@define-color button_normal_fg @font_idle;
+@define-color button_normal_border @border;
+
+@define-color button_focus_bg @button_focus;
+@define-color button_focus_fg @font_focus;
+@define-color button_focus_border @border;
+@define-color button_focus_boxshadow @border;
+
+@define-color button_hover_bg @button_hover;
+@define-color button_hover_fg @font_idle;
+@define-color button_hover_border @border;
+
+@define-color button_active_bg @button_pressed;
+@define-color button_active_fg @font_pressed;
+@define-color button_active_border @border;
+@define-color button_active_boxshadow @border;
+
+@define-color button_checked_bg @button_focus;
+
+/* progress bar */
+
+@define-color view_progress_border #ADADAD;
+@define-color view_progress_border_selected @border;
+@define-color view_progress_empty_bg_color #FFFFFF;
+@define-color view_progress_empty_fg_color #687075;
+@define-color view_progress_full_fg_color #545B5F;
+@define-color view_progress_selected_fg_color #474747;
+@define-color view_progress_fill_inner_border_color #FFFFFF;
+@define-color view_progress_fill_bg_color #E0F3FF;
+
+/* Scrollbar Colors */
+
+@define-color scrollbar_trough_bg rgba(255, 255, 255, 0.5);
+@define-color scrollbar_overlay_bg #C7C7C7;
+@define-color scrollbar_normal_bg #C7C7C7;
+@define-color scrollbar_hover_bg #979797;
+@define-color scrollbar_active_bg #979797;
+
+/* File Browser Colors */
+
+@define-color iconview_bg @area_darkest;
+
+@define-color theme_selection_bg_color @border;
+
+@define-color listview_item_bg @area_darkest;
+@define-color listview_item_border @border;
+@define-color listview_item_bg_hover @button_focus;
+@define-color listview_item_border_hover @button_hover;
+
+@define-color menubar_item_bg @header_idle;
+@define-color menubar_item_fg @font_idle;
+@define-color menubar_item_border @border;
+@define-color menu_item_hover_bg @header_focus;
+@define-color menu_item_hover_fg @font_pressed;
+@define-color menu_item_border @border;
+
+@define-color menu_bg @area_darker;
+@define-color menu_item_bg @header_focus;
+@define-color menu_item_fg @font_idle;
+@define-color menu_border @border;
+@define-color menu_border_darker @border;
+@define-color menu_item_border_highlight @border;
+
+@define-color view_selected_bg_color @border
+@define-color view_selected_border_color @border
+
+@define-color suggested_button_border_color @border;
+@define-color destructive_button_border_color @border;
+@define-color destructive_button_fg @font_idle;
+@define-color destructive_button_hover_bg @button_hover;
+@define-color destructive_button_focus_bg @button_focus;
+
+@define-color sidebar_bg_color @area_darker;
+@define-color sidebar_fg_color @font_idle;
+@define-color sidebar_selected_bg_hover_color @button_hover;
+@define-color sidebar_selected_bg_color @button_focus;
+@define-color sidebar_selected_bg_border_color @border;
+@define-color sidebar_selected_fg_color @font_focus;
+
+@define-color panel_bg_color @area_darker;
+@define-color panel_fg_color @font_idle;
+@define-color panel_hover_color @button_focus;
+
+/* Default Theme Stuff */
+@import url("gtk-widgets.css");
+/* Scrollbars */
+@import url("styles/scrollbars-rounded-light.css");
+/* Buttons */
+@import url("styles/buttons.css");
+/* Menus */
+@import url("styles/menus.css");
+/* Make tab close icon red when hovering */
+@import url("styles/tab-button-colors.css");

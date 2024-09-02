@@ -1,0 +1,105 @@
+# Mouse1-2-3-4-5 are respectively : left-middle-right click and scroll down-up
+# Move1-2-3 are respectively : pointer mouvement while left-middle-right
+# buttons are pressed
+# Mod 1-4 are respectively : Alt-Window
+
+# mouse click zones
+OnDesktop              Mouse1 : HideMenus
+OnDesktop              Mouse2 : Exec thunar
+OnDesktop              Mouse3 : Exec root-menu
+OnToolbar              Mouse2 : Exec root-menu
+OnToolbar              Mouse4 : PrevWindow {static groups} (iconhidden=no) (workspace=[current])
+OnToolbar              Mouse5 : NextWindow {static groups} (iconhidden=no) (workspace=[current])
+OnTitlebar             Mouse1 : MacroCmd {Raise} {Focus} {ActivateTab}
+OnTitlebar             Mouse2 : MacroCmd {Raise} {Focus} {StartTabbing}
+OnTitlebar             Mouse4 : ShadeOn
+OnTitlebar             Mouse5 : ShadeOff
+OnTitlebar     Double  Mouse1 : Maximize
+OnTitlebar     Double  Mouse2 : MoveTabLeft
+OnTitlebar     Double  Mouse3 : MacroCmd {Raise} {Focus} {WindowMenu}
+OnTitlebar             Move1  : StartMoving
+OnTitlebar             Move3  : MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnWindow       Mod4    Mouse1 : MacroCmd {Raise} {Focus} {StartMoving}
+OnWindow       Mod4    Mouse2 : Lower
+OnWindow       Mod4    Mouse3 : MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnWindow       Mod4    Mouse4 : Iconify
+OnWindow       Mod4    Mouse5 : Fullscreen
+OnWindowBorder         Move1  : StarMoving
+OnWindowBorder         Move3  : StartResizing NearestEdge
+OnLeftGrip             Move1  : StartResizing BottomLeft
+OnRightGrip            Move1  : StartResizing BottomRight
+
+# menus
+Mod1                   space  : WindowMenu
+Mod4                   space  : Exec root-menu
+
+# general commands
+Mod4                   E      : Exec urxvt -e vim
+Mod4                   D      : Exec dgrc
+Mod4                   F      : Exec thunar
+Mod4                   G      : Exec galculator
+Mod4                   H      : Exec urxvt -e vim -R ~/.fluxbox/keys
+Mod4                   I      : Exec dunstify -r 8 "$(wifi)"; tlp-mode-switch get; backlight get; volume get 
+Mod4                   K      : Exec keepassxc
+Mod4                   P      : Exec kill $(pidof ipager); sleep 1; ipager -c .config/ipager/ipager.conf
+Mod4                   R      : Exec fbrun -title "run" -w 250 -h 40 -font Terminus-10 -bg Gray8 -fg "Antique White" --text " "
+Mod4                   S      : Exec screenshot
+Mod4           Shift   S      : Exec screenshot
+Mod4                   T      : Exec urxvt
+Mod4                   W      : Exec icecat
+Mod4                   Z      : Exec zuluCrypt-gui
+
+# fluxbox controls
+Control        Mod1    C      : Reconfig
+Control        Mod1    R      : Restart
+Control        Mod1    Delete : Exit
+
+# system controls
+Control        Mod4    L      : Exec lock
+Control        Mod4    S      : Exec doas systemctl suspend
+Control        Mod4    P      : Exec doas systemctl poweroff
+
+# media commands
+XF86MonBrightnessUp           : Exec backlight inc 10
+XF86MonBrightnessDown         : Exec backlight dec 10
+XF86AudioRaiseVolume          : Exec volume inc 5
+XF86AudioLowerVolume          : Exec volume dec 5
+XF86AudioMute                 : Exec volume mute
+
+# window commands
+Mod4                   F4     : Close
+Mod4                   F5     : Kill
+Mod4                   F6     : ToggleDecor
+Mod4                   F7     : Stick
+Mod4                   F8     : Shade
+Mod4                   F9     : Minimize
+Mod4                   F10    : Maximize
+Mod4                   F11    : Fullscreen
+Mod1                   Tab    : NextTab
+Mod1           Shift   Tab    : PrevTab
+
+# window tiling
+Mod4                   Left   : MacroCmd {MoveTo 00% 00% TopLeft} {ResizeTo 050% 100%}
+Mod4                   Right  : MacroCmd {MoveTo 50% 00% TopLeft} {ResizeTo 050% 100%}
+Mod4                   Up     : MacroCmd {MoveTo 00% 00% TopLeft} {ResizeTo 100% 050%}
+Mod4                   Down   : MacroCmd {MoveTo 00% 50% TopLeft} {ResizeTo 100% 050%}
+Mod4           Shift   Left   : MacroCmd {MoveTo 00% 00% TopLeft} {ResizeTo 050% 050%}
+Mod4           Shift   Up     : MacroCmd {MoveTo 50% 00% TopLeft} {ResizeTo 050% 050%}
+Mod4           Shift   Down   : MacroCmd {MoveTo 00% 50% TopLeft} {ResizeTo 050% 050%}
+Mod4           Shift   Right  : MacroCmd {MoveTo 50% 50% TopLeft} {ResizeTo 050% 050%}
+Mod4                   1      : MacroCmd {MoveTo 00% 00% TopLeft} {ResizeTo 025% 100%}
+Mod4                   2      : MacroCmd {MoveTo 25% 00% TopLeft} {ResizeTo 025% 100%}
+Mod4                   3      : MacroCmd {MoveTo 50% 00% TopLeft} {ResizeTo 025% 100%}
+Mod4                   4      : MacroCmd {MoveTo 75% 00% TopLeft} {ResizeTo 025% 100%}
+Mod4                   5      : MacroCmd {MoveTo 00% 00% TopLeft} {ResizeTo 075% 100%}
+Mod4                   6      : MacroCmd {MoveTo 25% 00% TopLeft} {ResizeTo 050% 100%}
+Mod4                   7      : MacroCmd {MoveTo 25% 00% TopLeft} {ResizeTo 075% 100%}
+Mod4                   8      : MacroCmd {MoveTo 12% 12% TopLeft} {ResizeTo 076% 076%}
+
+# workspace commands
+Mod4                   Tab    : NextWindow {groups} (workspace=[current])
+Mod4           Shift   Tab    : PrevWindow {groups} (workspace=[current])
+Control        Mod4    Left   : PrevWorkspace
+Control        Mod4    Right  : NextWorkspace
+Control        Mod1    Left   : TakeToPrevWorkspace
+Control        Mod1    Right  : TakeToNextWorkspace

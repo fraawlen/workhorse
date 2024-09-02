@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Victory (21.07)
+Comment=Victory Light Flat Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=Victory (21.07)
+IconTheme=victory-icon-theme
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close

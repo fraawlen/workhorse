@@ -1,0 +1,26 @@
+notebook > header.top > tabs > tab button.flat image:last-child
+{
+margin-top: -50px;
+}
+
+notebook > header.top > tabs > tab button.flat 
+{
+min-width: 16px;
+min-height: 16px;
+}
+
+notebook > header.top > tabs > tab button.flat,
+notebook > header.top > tabs > tab button.flat:backdrop
+{
+ background-position: center;
+  background-repeat: no-repeat;
+background-image: -gtk-scaled(url("../../assets/window-close.svg"), url("../../assets/window-close.svg"));
+}
+
+notebook > header.top > tabs > tab button.flat:hover
+{
+  background-position: center;
+  background-repeat: no-repeat;
+background-image: -gtk-scaled(url("../../assets/window-close-hover.svg"), url("../../assets/window-close-hover.svg"));
+
+}

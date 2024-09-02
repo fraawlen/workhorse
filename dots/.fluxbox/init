@@ -1,0 +1,94 @@
+# * replaces screen0 and screen1
+
+# tabs
+session.*.tabs.usePixmap          : false
+session.*.tabs.maxOver            : true
+session.*.tabs.intitlebar         : true
+session.*.tab.placement           : TopLeft
+session.*.tab.width               : 200
+session.*.tabFocusModel           : ClickToTabFocus
+
+# windows
+session.*.window.focus.alpha      : 255
+session.*.window.unfocus.alpha    : 255
+session.*.titlebar.left           :	
+session.*.titlebar.right          : Minimize LHalf RHalf Close
+
+# toolbar
+session.screen0.toolbar.onhead    : 2
+session.*.toolbar.layer           : AboveDock
+session.*.toolbar.height          : 0
+session.*.toolbar.autoHide        : false
+session.*.toolbar.widthPercent    : 100
+session.*.toolbar.tools           : workspacename, iconbar, clock
+session.*.toolbar.visible         : true
+session.*.toolbar.alpha           : 255
+session.*.toolbar.placement       : BottomCenter
+session.*.toolbar.maxOver         : false
+
+# iconbar
+session.*.iconbar.alignment       : Center
+session.*.iconbar.usePixmap       : false
+session.*.iconbar.mode            : {static groups} (workspace) (minimized=yes)
+session.*.iconbar.iconWidth       : 250
+session.*.iconbar.iconTextPadding : 10
+
+# slit
+session.*.slit.layer              : Desktop
+session.*.slit.onhead             : 0
+session.*.slit.acceptKdeDockapps  : true
+session.*.slit.alpha              : 255
+session.*.slit.placement          : BottomRight
+session.*.slit.autoHide           : false
+session.*.slit.maxOver            : true
+
+# misc
+session.*.menu.alpha              : 255
+session.*.clientMenu.usePixmap    : false
+session.*.colPlacementDirection   : TopToBottom
+session.*.workspaces              : 5
+session.*.windowPlacement         : UnderMousePlacement
+session.*.focusModel              : ClickFocus
+session.*.clickRaises             : true
+session.*.maxDisableMove          : false
+session.*.noFocusWhileTypingDelay : 0
+session.*.fullMaximization        : false
+session.*.maxIgnoreIncrement      : true
+session.*.menuDelay               : 0
+session.*.defaultDeco             : NORMAL
+session.*.workspacewarping        : true
+session.*.strftimeFormat          :  %a %d - %H:%M:%S
+session.*.tooltipDelay            : 500
+session.*.showwindowposition      : false
+session.*.focusNewWindows         : true
+session.*.rowPlacementDirection   : LeftToRight
+session.*.edgeSnapThreshold       : 5
+session.*.focusSameHead           : false
+session.*.allowRemoteActions      : true
+session.*.opaqueMove              : true
+session.*.opaqueResize            : true
+session.*.maxDisableResize        : true
+session.*.workspaceNames          : ,   Workspace 1   ,   Workspace 2   ,   Workspace 3   ,   Workspace 4   ,   Workspace 5   ,
+session.*.autoRaise               : true
+
+# general
+session.cacheLife                 : 5
+session.configVersion             : 13
+session.cacheMax                  : 200
+session.tabsAttachArea            : Window
+session.doubleClickInterval       : 250
+session.menuSearch                : itemstart
+session.forcePseudoTransparency   : false
+session.tabPadding                : 0
+session.autoRaiseDelay            : 250
+session.ignoreBorder              : false
+session.colorsPerChannel          : 4
+
+# files locations
+session.*.windowMenu              : ~/.fluxbox/windowmenu
+session.menuFile                  : ~/.fluxbox/menu
+session.appsFile                  : ~/.fluxbox/apps
+session.slitlistFile              : ~/.fluxbox/slitlist
+session.styleOverlay              : ~/.fluxbox/overlay
+session.keyFile                   : ~/.fluxbox/keys
+session.styleFile                 : ~/.fluxbox/styles/workhorse

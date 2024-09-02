@@ -1,0 +1,77 @@
+#dunst settings
+[global]
+
+	# behaviour
+	monitor              = 1
+	follow               = none
+	indicate_hidden      = yes
+	shrink               = yes
+	sort                 = yes
+	idle_threshold       = 400
+	stack_duplicates     = false
+	hide_duplicate_count = false
+
+	# geometry
+	origin             = top-left
+	offset             = 38x160
+	width              = (436,1060)
+	height             = 800
+	separator_height   = 1
+	padding            = 10
+	horizontal_padding = 12
+	frame_width        = 2
+	corner_radius      = 0
+	icon_position      = off
+	shrink             = yes
+	progress_bar       = false
+
+	# geometry colors
+	transparency    = 0
+	frame_color     = "#000000"
+	separator_color = frame
+
+	# text
+	font               = Terminus 12
+	line_height        = 8
+	alignment          = left
+	vertical_alignment = center
+	show_age_threshold = -1
+	word_wrap          = yes
+	show_indicators    = yes
+	
+	# text display settings
+	ignore_newline   = no
+	stack_duplicates = true
+	show_indicators  = yes 
+	markup           = no
+	format           = "%s %b"
+
+	# history
+	history_length = 0
+	sticky_history = no
+	
+	# mouse
+	mouse_left_click   = close_current
+	mouse_middle_click = do_action
+	mouse_right_click  = close_all
+
+	# misc
+	title             = Dunst
+	class             = Dunst
+	always_run_script = false
+	force_xinerama    = false
+	browser           = /usr/bin/icecat
+
+# colors by urgency
+[urgency_low]
+    background = "#141414"
+    foreground = "#ebdbb2"
+    timeout    = 5
+[urgency_normal]
+    background = "#141414"
+    foreground = "#ebdbb2"
+    timeout    = 5
+[urgency_critical]
+    background = "#4d0d0b"
+    foreground = "#ffffff"
+    timeout    = 0

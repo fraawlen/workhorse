@@ -1,0 +1,24 @@
+!/bin/sh
+
+# single shot actions
+setxkbmap us
+numlockx
+xset -dpms
+xset s off
+xrdb ~/.Xressources
+
+# displays setup
+xrandr --output DisplayPort-0 --mode 1920x1080 --pos 0x120     --rotate left   --dpi 96 --set TearFree on
+xrandr --output DisplayPort-1 --mode 1920x1080 --pos 4920x120  --rotate right  --dpi 96 --set TearFree on
+xrandr --output HDMI-A-0      --mode 3840x2160 --pos 1080x0    --rotate normal --dpi 96 --set TearFree on --primary
+xrandr --output DVI-I-1-1     --mode 1024x600  --pos 4920x2040 --rotate normal --dpi 96
+xinput map-to-output "WaveShare WS170120" DVI-I-1-1
+
+# desktop components
+#picom         &
+sysgauges -m -x 38 -y 160 -w 442 &
+dunst         &
+xss-lock lock &
+mullvad-vpn   &
+ipager -c ~/.config/ipager/ipager.conf &
+exec fluxbox
