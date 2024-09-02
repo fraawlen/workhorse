@@ -13,6 +13,7 @@ Software dependencies
 
 - [Fluxbox](https://fluxbox.org)
 - [SysGauges](https://github.com/fraawlen/sysgauges)
+- [Thunar](https://docs.xfce.org/xfce/thunar/start)
 - [Ipager](https://aur.archlinux.org/packages/ipager)
 - [Dunst](https://github.com/dunst-project/dunst)
 - [Xmenu](https://github.com/phillbush/xmenu)
