@@ -7,7 +7,6 @@ Screenshots
 -----------
 
 ![pic-1](/images/pic-1.png)
-![pic-2](/images/pic-2.png)
 
 Software dependencies
 ---------------------
