@@ -20,12 +20,13 @@ Software dependencies
 - [Urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
 - [Sxiv](https://github.com/xyb3rt/sxiv)
 
-Icons packs & themes
------------
+Icons packs, fonts & themes
+---------------------------
 
 - [Haiku](https://www.gnome-look.org/p/1012423)
 - [Retrosmart](https://github.com/mdomlop/retrosmart-icon-theme)
 - [Vimix](https://github.com/vinceliuice/vimix-icon-theme)
+- [Terminus](https://terminus-font.sourceforge.net/)
 - [Victory](https://gitlab.com/newhoa/victory-gtk-theme), GTK theme that was used as a starting point.
 
 Mirrors
